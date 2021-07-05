@@ -1,0 +1,523 @@
+/* CSS Reset */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+
+/* Navigation Bar */
+.navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+.navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+/* Navigation Bar: Logo and Image */
+.logo{
+    margin: 10px 34px;
+}
+
+.logo img{
+    height: 59px;
+    margin: 3px 6px;
+}
+
+
+/* Navigation Bar: List Styling */
+
+.nav-list{
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+    z-index: 2;
+}
+
+.nav-list li{ 
+    list-style: none;
+    font-size: 1.0rem;
+}
+
+.nav-list li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    margin: 40px 0;
+    color: #03e9f4;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+   
+}
+.nav-list li a:hover{
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+
+.nav-list li a:nth-child(1){
+    filter: hue-rotate(270deg);
+}
+.nav-list li a:nth-child(2){
+    filter: hue-rotate(110deg);
+}
+.nav-list li a span{
+    position: absolute;
+    display: block;
+}
+.nav-list li a span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#03e9f4);
+    animation: animate1 1s linear infinite;
+}
+@keyframes animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+}
+.nav-list li a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+.nav-list li a span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+@keyframes animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+}
+
+
+.nav-list li a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+@keyframes animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+}
+
+.rightNav{
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+    z-index: 2;
+}
+
+.rightNav li{ 
+    list-style: none;
+    font-size: 1.0rem;
+    text-align: center;
+}
+.rightNav li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    margin: 40px 0;
+    color: #e621f3;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 2px;
+    overflow: hidden;
+    margin-right: 50px;
+   
+}
+.rightNav li a:hover{
+    background: #e621f3;
+    color: #050801;
+    box-shadow: 0 0 5px #e621f3,
+                0 0 25px #e621f3,
+                0 0 50px #e621f3,
+                0 0 200px #e621f3;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+
+.rightNav li a:nth-child(1){
+    filter: hue-rotate(270deg);
+}
+.rightNav li a:nth-child(2){
+    filter: hue-rotate(110deg);
+}
+.rightNav li a span{
+    position: absolute;
+    display: block;
+}
+.rightNav li a span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#e621f3);
+    animation: animate1 1s linear infinite;
+}
+@keyframes animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+}
+.rightNav li a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#e621f3);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+.rightNav li a span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#e621f3);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+@keyframes animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+}
+
+
+.rightNav li a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#e621f3);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+@keyframes animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+}
+
+.btna{
+    padding: 8px 20px;
+    margin: 7px 3px;
+    border: 2px solid white;
+    border-radius: 8px; 
+    background: none;
+    color: white;
+    cursor: pointer;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+}
+
+.btn-sm{
+    padding: 6px 10px;
+    vertical-align: middle;
+    font-size: 16px;
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{ 
+    content: "";
+    position: absolute;
+    background: url('../img/bg1.jpg') no-repeat center center/cover;
+    height: 642px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -2;
+    opacity:0.99;
+}
+
+#home h1{
+    color:white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+#home p{
+    color:white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+/* Services Section */
+#services{
+    margin: 34px;
+    display: flex;
+}
+#services .box{ 
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 2px 10px;
+    border-radius: 28px;
+    background: #f2f2f2;
+    margin-bottom: 20px;
+}
+
+#services .box img{ 
+   height: 160px;
+   margin: auto;
+   display: block;
+}
+
+#services .box p{
+    font-family: 'Bree Serif', serif;
+
+} 
+
+/* Clients Section */
+#client-section{ 
+    position: relative;
+    z-index: 0;
+}
+
+#client-section::before{
+ content: "";
+ position: absolute;
+ background: url('../img/bg.jpg')center center/cover;
+ width: 100%;
+ height: 100%;
+ z-index: -1;
+ opacity: 0.50;
+}
+
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+}
+.client-item{
+  position: relative;
+  width: 50%;
+  margin: 20px 50px;
+  padding: 3px 22px;
+  padding-bottom: 56.25%; 
+  height: 0;
+}
+.client-item iframe{
+  position: relative;
+  top:0;
+  left: 0;
+  margin: 10px 10px;
+  border: 2px solid brown;
+  width: 400;
+  height: 225;
+  border-radius: 28px;
+  margin-bottom: 20px;
+  z-index: 0;
+}
+.item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item iframe-container{
+  position: relative;
+  width: 50%;
+  margin: 20px 50px;
+  padding: 3px 22px;
+  padding-bottom: 56.25%; 
+  height: 0;
+}
+.iframe-container iframe{
+  position: relative;
+  top:0;
+  left: 0;
+  margin: 10px 10px;
+  border: 2px solid brown;
+  width: 400;
+  height: 225;
+  border-radius: 28px;
+  margin-bottom: 20px;
+  z-index: 0;
+}
+
+/* Contact Section */
+#contact{
+    position: relative;
+    z-index: 0;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+    opacity: 0.7;
+    background: url('../img/contact.jpg') no-repeat center center/cover;
+
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input, 
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+} 
+
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box label{
+   font-size: 1.3rem;
+   font-family: 'Bree Serif', serif;
+
+}
+
+
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+/* Utility Classes */
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 12px;
+}
+
+.h-secondary{
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor:pointer;
+    text-decoration: none;
+}
+
+.center{
+    text-align: center;
+}
+.left{
+    position: relative;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px dotted white;
+    padding: 6px 20px;
+    cursor:pointer;
+}
+
+.burger{
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top:15px;
+}
+.line{
+    width: 33px;
+    background-color: white;
+    height: 4px;
+    margin: 5px 3px;
+}
